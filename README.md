@@ -48,6 +48,10 @@ cd vcpkg
 ./vcpkg install sentencepiece
 cd ..
 ~~~
+- flask install
+~~~
+pip install Flask
+~~~
 ## データの準備
 - データの前処理 small_parallel_enjaのdetokenizeとjparacrawl pre-trained-modelを使うためにdownloadしたspm modelでtokenizeする
 ~~~
@@ -65,66 +69,19 @@ bash train.sh -n ${実験名} -g ${GPUのID} -s ${SEED値}
 # example
 # bash train.sh -n SAN_SEED33 -g 0 -s 33 
 popd
-~~~
-## 仮想環境から抜ける
-~~~
-conda deactivate
 cd ..
 ~~~
-# Nginx, uWSGI webサーバを使用してFlaskアプリケーションを導入する
-- python 環境 3.8.10
-## 仮想環境の構築
-- 仮想環境はvirtualenvで構築する
-~~~
-# app_venv ディレクトリに移動
-cd app_venv
-virtualenv app_env
-source app_env/bin/activate
-~~~
-## 必要なライブラリのインストール
-- uwsgi install
-~~~
-pip install uwsgi
-~~~
-- flask install
-~~~
-pip install Flask
-~~~
-- fairseq install 
-~~~
-git clone https://github.com/pytorch/fairseq
-cd fairseq
-pip install --editable ./
-cd ..
-~~~
-- sentencepiece install
-~~~
-git clone https://github.com/google/sentencepiece.git 
-cd sentencepiece
-mkdir build
-cd build
-cmake ..
-make -j $(nproc)
-sudo make install
-sudo ldconfig -v
-cd ../..
-~~~
-- vcpkg install
-~~~
-git clone https://github.com/Microsoft/vcpkg.git
-cd vcpkg
-./bootstrap-vcpkg.sh
-./vcpkg integrate install
-./vcpkg install sentencepiece
-cd ..
+# アプリケーションの実行・確認
 ~~~
 ## アプリの起動
 - 127.0.0.1:5000 に翻訳アプリが表示される
 ~~~
+cd application
+# app.py の model と fairseq-interactive の path を適切なものに書き換えてください
 python app.py
 ~~~
-- app.iniのhome, pythonpath, chdir, logtoのpathは各自のpathに書き換えてください
-## nginxのインストールとuWSGIの設定 
-- こちらのサイトでnginxとuWSGIの設定に関して詳しく説明されている 
-- https://serip39.hatenablog.com/entry/2020/07/06/070000
-
+# ngrok を利用して Flask で立ち上げたアプリケーションを外部に公開する
+~~~
+1. ngrok の公式サイトから linux version のものを install して 解凍
+2. nginx が入ってなかったら install 
+3. 
