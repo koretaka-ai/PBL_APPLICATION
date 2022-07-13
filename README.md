@@ -72,16 +72,16 @@ popd
 cd ..
 ~~~
 # アプリケーションの実行・確認
-~~~
 ## アプリの起動
 - 127.0.0.1:5000 に翻訳アプリが表示される
 ~~~
 cd application
+~~~
 # app.py の model と fairseq-interactive の path を適切なものに書き換えてください
+~~~
 python app.py
 ~~~
 # ngrok を利用して Flask で立ち上げたアプリケーションを外部に公開する
-~~~
 1. ngrok の公式サイトから linux version のものを install して 解凍
 2. nginx が入ってなかったら install 
 3. 
