@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="background-image: url('static/css/image/winter.png'); height: 100vh; background-size:cover;">
+    <div class="form p-3">
+        <div class="mx-auto border border-3 border-secondary w-50 p-1 fs-5 container-fluid bg-white text-dark" style="text-align: center; min-width: 30em; max-width:30em; border-radius: 10px; margin-bottom: 2cm;">
+            <p>使い方の説明</p>
+            <p>英語から日本語に翻訳をするサイトです。<br>左側の英語欄に英文を入力し、下にある翻訳ボタンを押してください。</p>
+        </div>
+        <form action ="/" method = "post">
+            <div class="mx-auto p-5 container-fluid" style="display: flex; min-width: 35em; max-width: 35em;">
+                <div class="float-start border border-3 border-info mx-auto" style="border-radius: 10px;">
+                    <div class="border border-1 text-center bg-white text-dark" style="border-radius: 7px;">英語</div>
+                    <textarea class="form-control" name="en" placeholder="英語を入力（100文字以内）" maxlength=100 style="height: 200px; width: 20em">{{en}}</textarea>
+                </div>
+                <div class="d-flex align-items-center mx-auto"><img src="static/css/image/icon.png"></div>
+                <div class="float-start border border-3 border-info mx-auto" style="border-radius: 10px;">
+                    <div class="border border-1 text-center bg-white text-dark" style="border-radius: 7px;">日本語</div>
+                    <textarea class="form-control" name="en" placeholder="日本語を出力" maxlength=100 style="height: 200px; width: 20em">{{ja}}</textarea>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center mx-auto" style="width:100%">
+                <input type="submit" class="btn btn-primary btn-lg mx-auto" style="width :100px;" value="翻訳">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<form class="mx-auto" style="width:100%; height:100%;" action ="/" method = "post">
+    <div class="mx-auto p-5 container-fluid" style="width:100%; max-width: 1000px; height:100%;">
+        <div class="border border-3 border-info" style="border-radius: 10px;">
+            <div class="border border-1 text-center bg-white text-dark" style="border-radius: 7px;">英語</div>
+            <textarea class="form-control" name="en" placeholder="英語を入力（100文字以内）" maxlength=100 style="height: 200px;">{{en}}</textarea>
+        </div>
+        <div class="mx-auto p-1"><img class="d-block mx-auto" style="width:15%; height:15%;"  src="static/css/image/icon.png"></div>
+        <div class="border border-3 border-info" style="border-radius: 10px;">
+            <div class="border border-1 text-center bg-white text-dark" style="border-radius: 7px;">日本語</div>
+            <textarea class="form-control" name="en" placeholder="日本語を出力" maxlength=100 style="height: 200px;">{{ja}}</textarea>
+        </div>
+        <div class="text-center p-3">
+            <input type="submit" class="btn btn-primary btn-lg" style="width :100px;" value="変換">
+        </div>
+    </div>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    $('[data-toggle="popover"]').popover();
+</script>
+{% endblock %}

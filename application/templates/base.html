@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <title>英日機械翻訳</title>
+    {% block head %}{% endblock %}
+</head>
+<body style="font-size: 200%; background-image: url('static/css/image/winter.png'); height: 100vh; background-size:cover; background-attachment: fixed; width:100%;">
+    <nav class="navbar navbar-light bg-light p-4 ">
+        <a class="navbar-brand" href="/" style="font-size:2rem;">英日翻訳</a>
+        <a class="bi bi-info-circle" style="margin-right:0px;" data-toggle="popover" data-placement="left" title="使い方の説明" data-content="英語から日本語に翻訳をするサイトです。左側の英語欄に英文を入力し、下にある翻訳ボタンを押してください。"></a>
+    </nav>
+    {% block body %}{% endblock %}
+</body>
+</html>
