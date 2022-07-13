@@ -82,4 +82,9 @@ python app.py
 # ngrok を利用して Flask で立ち上げたアプリケーションを外部に公開する
 1. ngrok の公式サイトから linux version のものを install して 解凍
 2. nginx が入ってなかったら install 
-3. 
+3. 以下のコマンドを入力し, localhost:5000 を外部に公開する
+~~~
+cd [ngrokをインストールして解凍したディレクトリ]
+./ngrok http 5000
+python app.py
+~~~
