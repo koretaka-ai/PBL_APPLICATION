@@ -62,6 +62,8 @@ popd
 pushd scripts/train
 bash fairseq_preprocess.sh
 bash train.sh -n ${実験名} -g ${GPUのID} -s ${SEED値}
+# example
+# bash train.sh -n SAN_SEED33 -g 0 -s 33 
 popd
 ~~~
 ## 仮想環境から抜ける
