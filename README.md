@@ -63,7 +63,7 @@ popd
 - fairseqの前処理と訓練
 - GPUを使う際には `nvidia-smi` を使用してGPUがあいているか確認
 ~~~ 
-pushd scripts/train
+pushd translate/scripts/train
 bash fairseq_preprocess.sh
 bash train.sh -n ${実験名} -g ${GPUのID} -s ${SEED値}
 # example
