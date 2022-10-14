@@ -55,7 +55,7 @@ pip install Flask
 ## データの準備
 - データの前処理 small_parallel_enjaのdetokenizeとjparacrawl pre-trained-modelを使うためにdownloadしたspm modelでtokenizeする
 ~~~
-pushd scripts/preprocess
+pushd translate/scripts/preprocess
 bash preprocess.sh
 popd
 ~~~
