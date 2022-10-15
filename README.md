@@ -6,7 +6,7 @@
 ## git clone
 ~~~
 git clone https://github.com/koretaka-ai/PBL_APPLICATION.git
-cd PBL_APPLICATIONtranslate
+cd PBL_APPLICATION/translate
 ~~~
 ## Anacondaが入っていなかったら導入
 - 詳しく説明しているサイト：https://hana-shin.hatenablog.com/entry/2022/02/12/203642
