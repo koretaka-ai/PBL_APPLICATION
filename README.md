@@ -69,7 +69,6 @@ bash train.sh -n ${実験名} -g ${GPUのID} -s ${SEED値}
 # example
 # bash train.sh -n SEED33 -g 0 -s 33 
 popd
-cd ..
 ~~~
 # アプリケーションの実行・確認
 ## アプリの起動
