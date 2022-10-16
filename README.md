@@ -73,7 +73,7 @@ popd
 # アプリケーションの実行・確認
 ## アプリの起動
 - 127.0.0.1:5000 に翻訳アプリが表示される
-- app.py の model と fairseq-interactive の path を適切なものに書き換えてください
+- app.py の model の path を適切なものに書き換えてください
 ~~~
 cd application
 python app.py
